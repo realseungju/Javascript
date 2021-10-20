@@ -1,0 +1,68 @@
+<script>
+
+    var arrData = [99, 97, 1, 3, 5];
+    var arrSave = [];
+    var size = 100;
+    var i,j= 0;
+    var arrSize = arrData.length;
+ 
+    function insertArr() 
+    {
+        document.write("임의의 배열은: ");
+
+        for (i=0;i<arrSize;i++) // 임의의 배열을 복사하고 프린트
+        {   
+            arrSave[i] = arrData[i];
+            document.write(" " + arrSave[i]);
+        }
+
+        document.write("<br>")
+
+        for (i=0;i<size;i++) // arrData의 값을 설정
+        {
+            arrData[i]=i+1; // 1부터 100까지
+
+            for (j=0;j<arrSave.length;j++) // arrSave에 들어있는 배열 수 만큼 반복
+            {
+                if (arrData[i] == arrSave[j]) // arrData i번째 인덱스 값이 arrSave j번째 인덱스와 같다면
+                {
+                    arrData[i] = 0; // 0으로 설정
+                }
+            }
+        }
+ 
+        selectArr();
+    }
+ 
+    function selectArr()
+    {
+ 
+       for (i=0;i<size;i++)
+       {
+          if (arrData[i]%2 != 0)
+          {
+             document.write(arrData[i] + " ");
+          }
+          else
+          {
+             document.write(" ");
+          }
+       }
+ 
+       addArr();
+     }
+ 
+    function addArr()
+    {
+       var sum = 0;
+ 
+       for (i=0;i<size;i++)
+       {
+          if (arrData[i]%2 != 0)
+             sum+=arrData[i];
+       }
+       document.write("<p/>배열 데이터 덧셈 연산 결과 : " + sum + "<br>");
+    }
+ 
+ </script>
+ <button type="button" onclick="insertArr()">배열 생성/조회/연산</button>
