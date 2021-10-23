@@ -1,0 +1,34 @@
+<script>
+  var students = 10;
+  var grade = [0];
+  var i;
+  var sum = 0;
+
+  function Button_1()
+  {
+    for (i=0; i<students; i++)
+    {
+      grade[i] = 20+5*i;
+      document.write(i+1 + " 번 점수는 " + grade[i] + " 입니다.<br>");
+    }
+    Button_2();
+  }
+
+  function Button_2()
+  {
+    for (i=0; i<students; i++)
+    {
+      sum += grade[i];
+    }
+    document.write("모든 점수의 합은 " + sum + " 입니다.<br>");
+    Button_3();
+  }
+
+  function Button_3()
+  {
+    document.write("모든 점수의 평균 값은 " + sum / grade.length + " 입니다.<br>");
+  }
+
+</script>
+
+<button type="button" onclick="Button_1()">버튼 실행</button><br>
