@@ -2,7 +2,7 @@
   var city=new Array("Seoul","Busan","Incheon");
   function printArr()
   {
-    if (city instanceof Array)
+    if (city instanceof Array) // city가 Array 데이터 타입에 해당되는가 true
     {
       document.write("배열 객체가 생성되었습니다.<br>");
       var i;
@@ -11,13 +11,13 @@
         document.write("배열 데이터 ["+ i +"] = " + city[i] + "<br>");
       }
     }
-    else
+    else // false
     {
       document.write("배열 객체가 아닙니다.<br>");
       document.write("데이터 : " + city + "<br>");
     }
   }
   printArr();
-  document.write("city 변수 타입 : " + typeof city + "<br>");
-  document.write("배열 객체 확인 결과 : " + Array.isArray(city) + "<br>");
+  document.write("city 변수 타입 : " + typeof city + "<br>"); // city의 데이터 타입 확인
+  document.write("배열 객체 확인 결과 : " + Array.isArray(city) + "<br>"); // Array 이면 true 아니면 false
 </script>

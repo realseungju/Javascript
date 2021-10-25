@@ -11,9 +11,9 @@
         ]
     ];
 
-    var Array_1 = [0];
-    var Array_2 = [0];
-    var Array_3 = [0];
+    var Array_1 = [0, 0, 0, 0, 0];
+    var Array_2 = [0, 0, 0, 0, 0];
+    var Array_3 = [0, 0, 0, 0, 0];
     var Array_2d_2 = [Array_1, Array_2, Array_3];
     var i,
         j;
@@ -36,11 +36,7 @@
     document.write("복사 후 Array_2d_2의 값<br>");
     for (j = 0; j < col; j++) {
         Array_1[j] = Array_2d[0][j];
-    }
-    for (j = 0; j < col; j++) {
         Array_2[j] = Array_2d[1][j];
-    }
-    for (j = 0; j < col; j++) {
         Array_3[j] = Array_2d[2][j];
     }
     for (i = 0; i < row; i++) {
