@@ -3,6 +3,7 @@
   var grade = [0];
   var i;
   var sum = 0;
+  var city = ["Seoul", "Busan", "Daejun"];
 
   function Button_1()
   {
@@ -27,6 +28,15 @@
   function Button_3()
   {
     document.write("모든 점수의 평균 값은 " + sum / grade.length + " 입니다.<br>");
+    Show_City();
+  }
+
+  function Show_City()
+  {
+    for (i=0; i<3; i++)
+    {
+      document.write("도시 목록은 " + city[i] + "<br>");
+    }
   }
 
 </script>

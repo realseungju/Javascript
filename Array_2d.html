@@ -1,0 +1,52 @@
+<script>
+    var Array_2d = [
+        [
+            10, 20, 30, 40, 50
+        ],
+        [
+            60, 70, 80, 90, 100
+        ],
+        [
+            110, 120, 130, 140, 150
+        ]
+    ];
+
+    var Array_1 = [0];
+    var Array_2 = [0];
+    var Array_3 = [0];
+    var Array_2d_2 = [Array_1, Array_2, Array_3];
+    var i,
+        j;
+    var row = 3;
+    var col = 5;
+    document.write("Array_2d의 값<br>");
+    for (i = 0; i < row; i++) {
+        for (j = 0; j < col; j++) {
+            document.write(Array_2d[i][j] + " ");
+        }
+        document.write("<br>");
+    }
+    document.write("복사하기 전 Array_2d_2의 값<br>");
+    for (i = 0; i < row; i++) {
+        for (j = 0; j < col; j++) {
+            document.write(Array_2d_2[i][j] + " ");
+        }
+        document.write("<br>");
+    }
+    document.write("복사 후 Array_2d_2의 값<br>");
+    for (j = 0; j < col; j++) {
+        Array_1[j] = Array_2d[0][j];
+    }
+    for (j = 0; j < col; j++) {
+        Array_2[j] = Array_2d[1][j];
+    }
+    for (j = 0; j < col; j++) {
+        Array_3[j] = Array_2d[2][j];
+    }
+    for (i = 0; i < row; i++) {
+        for (j = 0; j < col; j++) {
+            document.write(Array_2d_2[i][j] + " ");
+        }
+        document.write("<br>");
+    }
+</script>
