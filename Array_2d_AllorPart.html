@@ -1,0 +1,51 @@
+<script>
+  var arr0=[10,20,30,40,50];
+  var arr1=[11,21,31,41,51];
+  var arr2=[12,22,32,42,52];
+  var arr3=[13,23,33,43,53];
+  var allArr=[arr0,arr1,arr2,arr3];
+  var partArr_1=[arr1,arr3];
+  var partArr_2=[arr0,arr2];
+
+  function printAll()
+  {
+    for (var i=0; i<allArr.length; i++)
+    {
+      for (var j=0; j<allArr[i].length; j++)
+      {
+        document.write(allArr[i][j] + " ");
+      }
+      document.write("<br>");
+    }
+    document.write("<a href='2d_Array_AllorPart.html'>돌아가기</a>");
+  }
+
+  function printPart_1()
+  {
+    for (var i=0; i<partArr_1.length; i++)
+    {
+      for (var j=0; j<partArr_1[i].length; j++)
+      {
+        document.write(partArr_1[i][j] + " ");
+      }
+      document.write("<br>");
+    }
+    document.write("<a href='2d_Array_AllorPart.html'>돌아가기</a>");
+  }
+
+  function printPart_2()
+  {
+    for (var i=0; i<partArr_2.length; i++)
+    {
+      for (var j=0; j<partArr_2[i].length; j++)
+      {
+        document.write(partArr_2[i][j] + " ");
+      }
+      document.write("<br>");
+    }
+    document.write("<a href='2d_Array_AllorPart.html'>돌아가기</a>");
+  }
+</script>
+<button type="button" onclick="printAll()">전체 배열 데이터</button>
+<button type="button" onclick="printPart_1()">홀수 배열 데이터</button>
+<button type="button" onclick="printPart_2()">짝수 배열 데이터</button>

@@ -1,0 +1,32 @@
+<script>
+    var i,
+        j;
+    var arr0 = [];
+    var arr1 = [];
+    var arr2 = [];
+    var arr3 = [];
+    var allArr = [arr0, arr1, arr2, arr3];
+    var allArr2 = [arr0, arr1, arr2, arr3];
+
+    function write_2d_matrix(num) {
+        for (i = 0; i < 4; i++) {
+            for (j = 0; j < 4; j++) {
+                allArr2[i][j] = 0;
+                if (i === 2 || j === 3) { // i´Â Çà j ¿­
+                    allArr2[i][j] = num;
+                }
+            }
+        }
+    }
+
+    function printAll() {
+        for (i = 0; i < allArr.length; i++) {
+            for (j = 0; j < allArr[i].length; j++) {
+                document.write(allArr[i][j] + " ");
+            }
+            document.write("<br>");
+        }
+    }
+    write_2d_matrix(1);
+    printAll();
+</script>
