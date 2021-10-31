@@ -3,18 +3,22 @@
 <head>
 	<meta charset="utf-8">
 	<script>
-		document.write("ejs1.js");
-		document.write("<div style='color: red; font-size: 24px;'> 외부 자바스크립트 파일</div>");
+		document.write("ejs1.js<br>"); // 글자를 출력할 뿐
+		document.write("<script src = './ejs/ejs.js'><"+"/script>"); // "+" 나 \로 아직 string이 끝나지 않았음을 알려줌
+		document.write('<script src = "./ejs/ejs1.js"><\/script>'); // 위 아래 모두 js 에서 js를 실헹
+		document.write("<div style='color: red; font-size: 24px;'> 내부 자바스크립트 파일</div>");
 	</script>
 </head>
 <body>
 	<script>
-		document.write("ejs2.js");
-		document.write("<div style='color: blue; font-size: 20px;'> 외부 자바스크립트 파일</div>");
+		document.write("ejs2.js<br>");
+		document.write("<script src = './ejs/ejs2.js'><"+"/script>");
+		document.write("<div style='color: blue; font-size: 20px;'> 내부 자바스크립트 파일</div>");
 	</script>
 	<script>
-		document.write("ejs3.js");
-		document.write("<div style='color: green; font-size: 16px;'> 외부 자바스크립트 파일</div>");
+		document.write("ejs3.js<br>");
+		document.write("<script src = './ejs/ejs3.js'><"+"/script>");
+		document.write("<div style='color: green; font-size: 16px;'> 내부 자바스크립트 파일</div>");
 	</script>
 </body>
 </html>
