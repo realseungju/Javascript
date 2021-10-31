@@ -20,9 +20,21 @@
     }
 
     function printAll() {
+
+        document.write("allArr 배열의 값<br>");
+
         for (i = 0; i < allArr.length; i++) {
             for (j = 0; j < allArr[i].length; j++) {
                 document.write(allArr[i][j] + " ");
+            }
+            document.write("<br><br>");
+        }
+
+        document.write("allArr2 배열의 값<br>");
+
+        for (i = 0; i < allArr2.length; i++) {
+            for (j = 0; j < allArr2[i].length; j++) {
+                document.write(allArr2[i][j] + " ");
             }
             document.write("<br>");
         }
