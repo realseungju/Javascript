@@ -1,0 +1,31 @@
+<body>
+	<p id="carname"></p>
+	<p id="carcolor"></p>
+	<p id="carspeed"></p>
+	<p id="string_plus"></p>
+	<script>
+		var car={
+			name: 'Sonata',
+			speed: 50,
+			color: 'white',
+			start: function() {
+				return this.speed+10;
+			},
+			string_plus: function(a,b) {
+				return a+b;
+			}
+		};
+		var cname=document.getElementById("carname");
+		cname.textContent=car.name;
+
+		var colname=document.getElementById("carcolor");
+		colname.textContent=car.color;
+
+		var cspeed=document.getElementById("carspeed");
+		cspeed.textContent=car.start();
+
+		var string_p=document.getElementById("string_plus");
+		string_p.textContent=car.string_plus("aaa","bbb");
+
+	</script>
+</body>

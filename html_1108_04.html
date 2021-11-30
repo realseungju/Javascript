@@ -1,0 +1,53 @@
+<body>
+	<p id="carspeedup"></p>
+	<p id="carspeeddown"></p>
+	<p id="matrix"></p>
+	<script>
+		var car={
+			name: 'Sonata',
+			speed: 50,
+			color: 'white',
+			speed_up: function() {
+				return this.speed+10;
+			},
+			speed_down: function() {
+				return this.speed-10;
+			},
+			matrix: function(row,col) {
+
+				var i,j;
+				var arr = new Array(row); // 배열 생성
+
+				for (i=0; i<row; i++) {
+					arr[i] = new Array(col); // 2차원 배열 생성
+					for (j=0; j<col; j++) {
+						arr[i][j] = 0;
+					}
+				}
+
+				for (i=0; i<arr.length; i++) {
+					for (j=0; j<arr[i].length; j++) {
+						if (j == i || j == col-(i+1)) { // 배열의 행과 열이 같으면 오른쪽 아래로 향하는 대각선
+							arr[i][j] = 1;
+						}
+					}
+				}
+
+				for (i=0; i<arr.length; i++) {
+					for (j=0; j<arr[i].length; j++) {
+						document.write(arr[i][j] + " ");
+					}
+				document.write("<br>");
+				}
+			}
+		};
+
+		var cspeedup=document.getElementById("carspeedup");
+		cspeedup.textContent="속도 증가 : " + car.speed_up();
+		var cspeeddown=document.getElementById("carspeeddown");
+		cspeeddown.textContent="속도 감소 : " + car.speed_down();
+		var matrix_write=document.getElementById("matrix");
+		matrix_write.textContent=car.matrix(10,10);
+
+	</script>
+</body>
